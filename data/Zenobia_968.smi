@@ -1,0 +1,856 @@
+SMILES Name 
+O=C(O)c1c[nH]c2ccccc12 0
+O=C(O)c1cccc2cccnc12 1
+Oc1cc2ccccc2cn1 2
+Cn1cc(C(=O)O)c2ccccc21 3
+O=C(O)c1cc2ccccc2s1 4
+O=C(O)c1c[nH]cn1 5
+O=C(O)c1cc(O)c2ccccc2n1 6
+c1ccc(-c2nnn[nH]2)cc1 7
+Nc1cc[nH]c(=O)n1 8
+N[C@H](Cc1c[nH]c2ccccc12)C(=O)O 9
+NC(=O)c1ccc(N)nc1 10
+N[C@@H]1c2ccccc2C[C@H]1O 11
+CSc1nc(N)nc2nc[nH]c12 12
+Nc1ccc2c(c1)SC1NCCN21 13
+O=C(O)c1cnccn1 14
+Cc1ccc(S(=O)(=O)N2CCCC2=O)cc1 15
+Cc1cc(O)nc2ccccc12 16
+Nc1ncc(Br)cc1C(=O)O 17
+N[C@H]1[C@@H]2CC[C@@H](O2)[C@H]1C(=O)O 18
+NC1c2ccccc2CCC1C(=O)O 19
+Nc1ncnc2[nH]ncc12 20
+O=c1nc[nH]c2[nH]ccc12 21
+Oc1nnc2ccccn12 22
+Cl.Cl.Nc1c[nH]c2ncccc12 23
+O=c1[nH]c2c(s1)CCC2 24
+O=c1nccc2[nH]ccn12 25
+Nc1noc2ccccc12 26
+Oc1ccccc1-c1ccccc1 27
+N#Cc1cccc2cnccc12 28
+CS(=O)(=O)c1ccc(OC(F)(F)F)cc1 29
+CS(=O)(=O)c1ccccc1 30
+O=C1CC2(CCNCC2)Oc2ccccc21 31
+N#Cc1ccc(N2CCNCC2)cc1 32
+FC(F)(F)c1ccc2[nH]ncc2c1 33
+N#Cc1ccc(C(=O)O)cc1 34
+CN(C)S(=O)(=O)N1CCNCC1 35
+Oc1ccc(-c2ccccc2F)cc1 36
+Oc1nccc2ccccc12 37
+Cn1cnnc1-c1ccc(N)cc1 38
+CNC(=O)c1cccc(F)c1 39
+Cl.NC1CCOCC1 40
+c1ccc(-c2ccncn2)cc1 41
+Brc1nncs1 42
+CNC(=O)c1cc(-c2ccccc2)on1 43
+Brc1cccc2cnccc12 44
+Cc1nc(-c2ccccc2)cs1 45
+CN(C)C1(c2ccccc2)CCCCC1 46
+COc1ccc(-c2ccccn2)cc1 47
+Nc1nccc(-c2ccccc2)n1 48
+Oc1cccc(N2CCOCC2)c1 49
+Cc1cc(-c2ccccc2)n[nH]1 50
+CNC(=O)c1ccc(F)cc1 51
+Oc1ccc(-n2cncn2)cc1 52
+CN1CCCc2ccc(N)cc21 53
+COc1ccccc1-c1cc[nH]n1 54
+OC1(c2ccccc2)CCCNC1 55
+CC(=O)N1CCCc2cc(N)ccc21.Cl 56
+Oc1ccccc1-c1nc2ccccc2o1 57
+O=C1NC(=O)C2(CCc3ccccc32)N1 58
+Cl.Nc1ccccc1-c1ccc(F)cc1 59
+Nc1ccc(SSC(F)F)cc1 60
+CS(=O)(=O)N1CCC(N)CC1 61
+Cl.NCC1CCCCC1O 62
+COC1CCNCC1.Cl 63
+CS(=O)(=O)N1CCC(=O)CC1 64
+Nc1cnc2ccccn2c1=O 65
+O=C1CNCCN1c1ccccc1 66
+Nc1c(F)cccc1C(=O)O 67
+Clc1ccc2nccnc2c1 68
+Nc1cccc2ocnc12 69
+CN(C)c1ccccc1C(=O)O 70
+CC1(N)CCC1.Cl 71
+Nc1ccc2nccnc2c1 72
+O=C(O)c1cccc2cccnc12 73
+Oc1ccc(Cl)c2ccccc12 74
+CC(C(=O)O)c1ccc(-c2ccccc2)c(F)c1 75
+Nc1cncnc1N 76
+COc1cc2c(cc1OC)CNCC2 77
+Nc1ncc2[nH]cnc2n1 78
+O=C(O)c1ccc2c(c1)CCCC2 79
+CC(=O)C1CCc2ccccc2C1=O 80
+OCC1COc2ccccc2O1 81
+COc1ccc2c(O)ccnc2c1 82
+COc1ccc2ncc(Br)cc2c1 83
+Cl.Cl.Nc1cnc2ccc(Br)cc2c1 84
+Cl.Cl.Nc1cnc2cc(Br)ccc2c1 85
+Cl.Cl.Nc1cnc2cc(F)ccc2c1 86
+Nc1ccnc2c(Br)cccc12 87
+COc1cccc2c(O)ccnc12 88
+O=C1CCNC(=O)N1 89
+O=c1ccc2c([nH]1)CCCC2 90
+Nc1ncc(C(=O)O)o1 91
+Cc1cc(C(=O)O)[nH]n1 92
+O=c1cn[nH]c(=O)[nH]1 93
+Cn1c(N)nc2ccccc21 94
+O=C(O)[C@@H]1CCCN1 95
+O=C(c1ccccc1)[C@H]1[C@@H]2CC[C@@H](C2)[C@H]1C(=O)O 96
+O=C(O)c1ccc2scnc2c1 97
+Clc1cccnc1Cl 98
+N#Cc1c[nH]c2ncccc12 99
+Cc1ccc2cccnc2n1 100
+Cl.NCc1nccs1 101
+FC(F)(F)c1nc[nH]n1 102
+CC1CNCC(C)N1 103
+C1=CC2OC1c1ccccc12 104
+Cl.Cl.c1n[nH]c2c1CNCC2 105
+Cl.Nc1cccnn1 106
+C1NCC12COC2.C1NCC12COC2.O=C([O-])C(=O)[O-] 107
+Cc1ccnc(O)n1.Cl 108
+CC1(C)OC(=O)NC1=O 109
+Cc1cc(O)no1 110
+Cn1nnc2ccccc21 111
+Cc1n[nH]c(=S)[nH]c1=O 112
+CN1CCS(=O)(=O)CC1 113
+CN1CC(=O)NC1=O 114
+c1cnc2cn[nH]c2c1 115
+c1cnc2[nH]ncc2c1 116
+c1cc2[nH]ncc2cn1 117
+Br.Cc1cc(N)sn1 118
+Nc1nnc2ccccn12 119
+Cc1nc2ncccc2o1 120
+Cl.Cl.Cn1cc(N)cn1 121
+N#Cc1ccc2[nH]ccc2c1 122
+FC(F)(F)c1cccc2cccnc12 123
+N#Cc1cccnc1O 124
+Cl.Nc1ccccc1-c1ccccc1 125
+Cc1ccccc1-c1ccc(N)cc1.Cl 126
+FC(F)(F)c1ccc2cn[nH]c2c1 127
+Cl.NC1CCc2ccccc21 128
+Oc1ncccc1C(F)(F)F 129
+c1ccc(-c2ccncc2)cc1 130
+N#Cc1ncccc1O 131
+NS(=O)(=O)c1ccc(C(F)(F)F)cc1 132
+FC(F)(F)c1ccc(N2CCNCC2)cc1 133
+CS(=O)(=O)c1ccc(C(=O)O)cc1 134
+N#Cc1ccc2cn[nH]c2c1 135
+Cc1cnccc1Br.Cl 136
+N#Cc1ccc2[nH]ncc2c1 137
+CN1CC(=O)NC1=N 138
+Cl.Clc1ccccc1N1CCNCC1 139
+Cl.NC(c1ccccc1)c1ccccc1 140
+CS(=O)(=O)c1ccc(O)cc1 141
+N#Cc1ccc2ncsc2c1 142
+N#Cc1cccc(O)c1O 143
+Fc1ccc(-c2ccccc2)cc1 144
+CS(=O)(=O)c1ccc(N2CCNCC2)cc1 145
+N#Cc1ccc(S(N)(=O)=O)cc1 146
+Cc1ccc(-c2ccccc2C#N)cc1 147
+O=C(O)c1c[nH]nn1 148
+CS(=O)(=O)c1ccc(N)cc1.Cl 149
+COc1ccccc1C1CCNCC1 150
+Oc1cccc2cnccc12 151
+COc1ccc(C(=O)O)c(O)c1 152
+Nc1ncnc2[nH]ncc12 153
+O=C1Cc2ccccc2O1 154
+O=C(O)c1cccnc1S 155
+Oc1nc2ccccc2s1 156
+c1ccc2c3c([nH]c2c1)CNCC3 157
+CN1CCN(Cc2ccc(N)cc2)CC1 158
+CN1CCC(NCc2ccc(N)cc2)CC1.Cl.Cl 159
+CN1CCN(c2ccc(N)cc2)CC1 160
+CC1(C)OC(=O)c2cc(Br)c(O)cc2O1 161
+CC(=O)c1ccc2c(c1)CCCN2 162
+Oc1ccnc2c(Br)cccc12 163
+Cc1cc2ccccc2nc1N 164
+Oc1ccc2cc(Br)ccc2n1 165
+Nc1ccnc2cc(Br)ccc12 166
+COc1ccc2c(N)ccnc2c1 167
+Cc1ccc2ccc(Br)cc2n1 168
+CCc1nc(C(=O)[O-])nc2ccc(C)cc12 169
+c1ccc2cnncc2c1 170
+Cc1nc[nH]n1 171
+Cc1nnc(C)[nH]1 172
+c1cnc2[nH]ccc2c1 173
+Oc1cnccn1 174
+Cc1nnc(N)[nH]1 175
+O=c1cccn[nH]1 176
+O=c1nc[nH][nH]1 177
+c1cc2[nH]ccc2cn1 178
+c1cnc2cc[nH]c2c1 179
+Cl.c1n[nH]c2c1CCCC2 180
+CN1CCCS1(=O)=O 181
+Cc1nnn[nH]1 182
+Cl.O=S1(=O)CCNCC1 183
+c1ccc(-c2cc[nH]n2)cc1 184
+c1cc2cn[nH]c2cn1 185
+COC1CNC1.Cl 186
+c1cnc2ncccc2c1 187
+Cc1n[nH]c(=O)[nH]c1=O 188
+Cc1cnc(C(F)(F)F)cn1 189
+Cl.c1cnc2cccnc2c1 190
+c1ccc2cnccc2c1 191
+Cc1cccc(O)n1 192
+Nc1ncccc1O 193
+O=C(O)Cc1c[nH]c2ccccc12 194
+Oc1ccc2ccccc2n1 195
+Cc1cc(N)c2ccccc2n1 196
+Cc1ccc2cccc(O)c2n1 197
+Cc1cc(O)c2ccccc2n1 198
+O=C(O)c1ccc2ccccc2n1 199
+Nc1cccc2cnccc12 200
+Oc1ccnc2cc(Cl)ccc12 201
+Cc1cnc(N)s1 202
+Cc1ncc[nH]1 203
+Nc1nccs1 204
+Nc1cc[nH]n1 205
+c1cncc(Cn2cccc2)c1 206
+NC(=O)Cc1c[nH]c2ccccc12 207
+O=C(O)c1ccco1 208
+Cc1cnc[nH]1 209
+O=C1Cc2ccccc2N1 210
+CN1C(=O)Cc2ccccc21 211
+O=C1Nc2ccc(Br)cc2C1=O 212
+Cc1ccc2oc(C(=O)O)cc(=O)c2c1 213
+Cc1cc(=O)oc2cc(N)ccc12 214
+COc1ccc(N)cn1 215
+COc1ncccc1C(=O)O 216
+OC1COC2C(O)COC12 217
+O=C1CCC(C(=O)O)N1 218
+O=C(O)C1CC(O)CN1 219
+Cc1c[nH]c(=O)nc1N.Cl 220
+Cl.Cl.NCCC(N)C(=O)O 221
+CC(=O)N1CCC(C(=O)O)CC1 222
+c1ccc2[nH]ccc2c1 223
+Nc1ccc(C(=O)O)cc1 224
+Cn1c(=O)[nH]c2nc[nH]c2c1=O 225
+O=C(O)C1Cc2ccccc2CN1 226
+OC1(c2ccccc2)CCNCC1 227
+COc1ccccc1N1CCNCC1 228
+COc1ccc(N2CCNCC2)cc1 229
+CC(=O)c1ccc(N2CCNCC2)cc1 230
+Cc1ccsc1C(=O)O 231
+Cc1csc(C(=O)O)c1 232
+CC(=O)NC1CCSC1=O 233
+Oc1ncnc2ccccc12 234
+Nc1ncccn1 235
+O=C1C=CC(=O)N1c1ccccc1 236
+O=C(O)c1ccc2c(c1)C(=O)OC2=O 237
+O=C1CC2(CCCC2)CC(=O)O1 238
+O=C1CSC(=O)N1 239
+N#CC12CC3CC(CC(C3)C1)C2 240
+Cl.c1ccc2c(CC3=NCCN3)cccc2c1 241
+Nc1ccc(N2CCOCC2)cc1 242
+CC1(C)NC(=O)OC1=O 243
+C1CCC2=NCCCN2CC1 244
+Cc1cc(N)no1 245
+COc1c2occc2cc2ccc(=O)oc12 246
+Cc1cccnc1N 247
+Oc1ccc2[nH]ccc2c1 248
+OCc1c[nH]c2ccccc12 249
+NC1c2ccccc2CC1C(=O)O 250
+NC(CC(=O)O)C1CCCCC1 251
+NC(CC(=O)O)c1cccs1 252
+Cl.N[C@@H]1CC=CC[C@@H]1CO 253
+Cl.N[C@H]1CC=CC[C@@H]1CO 254
+Cl.N[C@H]1CCC[C@H]1O 255
+Cl.N[C@@H]1CCC[C@H]1O 256
+COc1ccccc1CC1CCNCC1.Cl 257
+Fc1ccc(CC2CCCNC2)cc1 258
+O=C(O)C1(c2ccc(F)cc2)CC1 259
+Cl.NCC1(c2ccc(F)cc2)CC1 260
+Cl.NCC1(c2ccc(Br)cc2)CC1 261
+CC(=O)N1CC(C)(C)c2ccc(N)cc21.Cl 262
+O=C(O)c1noc2cc(Br)ccc12 263
+CC(=O)c1ccc2c(c1)CNCC2.Cl 264
+Cl.Nc1ccc(CCN2CCCC2)cc1 265
+Oc1ccc(C2=NCCN2)cc1 266
+Brc1ccc2scnc2c1 267
+Oc1ccccc1N1CCCCC1 268
+Brc1ccc(-c2ccon2)cc1 269
+O=C(O)c1cnc2ccccc2c1O 270
+Nc1nc2nc[nH]c2c(=O)[nH]1 271
+CC1=CC(=O)CC(C)(C)C1(O)/C=C/C(C)=C/C(=O)O 272
+Sc1nc2cc(Cl)ccc2o1 273
+O=c1[nH]c(=O)c2nccnc2[nH]1 274
+COc1cc2c(cc1OC)CNCC2.Cl 275
+BrCC1COc2ccccc2O1 276
+O=C1Nc2ccccc2C1=O 277
+Nc1ccc(CN2CCOCC2)cc1 278
+Oc1ccnc2ccc(Br)cc12 279
+O=C1Nc2ccc(Br)cc2C1=O 280
+Oc1ccc2ccccc2n1 281
+NC(=O)[C@H]1[C@@H](N)[C@@H]2C=C[C@H]1C2 282
+O=C(O)C1CC(O)CN1 283
+C=CCC(=O)O 284
+CC(=O)N1CCN(c2ccc(O)cc2)CC1 285
+O=c1oc2ccccc2cc1Cl 286
+Brc1cncc2ccccc12 287
+N[C@H](Cc1c[nH]c2ccccc12)C(=O)O 288
+NCCCC[C@@H](N)C(=O)O 289
+N[C@H](Cc1c[nH]cn1)C(=O)O 290
+NC(=O)C[C@@H](N)C(=O)O 291
+N[C@H](CC(=O)O)C(=O)O 292
+O[C@H]1CCCC[C@H]1O 293
+O[C@@H]1CCCC[C@H]1O 294
+O=C(O)[C@H]1CCCCN1 295
+O=C(O)C1CCCCN1 296
+CC1(C)COC(=O)[C@H]1O 297
+CC(C)(CO)C1OOC1=O 298
+O=C1O[C@H](CO)[C@@H](O)[C@H]1O 299
+CO[C@H]1OC[C@H](O)[C@H](O)[C@H]1O 300
+O=C[C@@H](O)[C@@H](O)[C@H](O)[C@H](O)CO 301
+OCC1OC(O)C(O)C(O)C1O 302
+C[C@]1(O)O[C@H](CO)[C@H](O)[C@H](O)[C@H]1O 303
+CO[C@@H]1[C@@H](O)C(O)O[C@H](CO)[C@H]1O 304
+COC1OC(CO)C(O)C(O)C1O 305
+Cl.NCCC[C@@H](N)C(=O)O 306
+NCCCC(=O)O 307
+CNCC(=O)O 308
+CN[C@@H](CC(C)C)C(=O)O 309
+CNC(C(=O)O)C(C)C 310
+O=C(O)[C@]1(O)CCCN1 311
+CCCC[C@@H](N)C(=O)O 312
+CCCC[C@H](N)C(=O)O 313
+NCCC(=O)O 314
+OCC(O)C(O)C(O)CO 315
+O=C(CO)[C@@H](O)[C@H](O)[C@H](O)CO 316
+O=C[C@@H](O)[C@H](O)[C@@H](O)CO 317
+O=C[C@@H](O)[C@H](O)[C@H](O)CO 318
+O=C[C@H](O)[C@@H](O)[C@@H](O)CO 319
+O=C(O)/C=C\C(=O)O 320
+CCC(N)C(=O)O 321
+CC(C(=O)O)C(N)C(=O)O 322
+O=S(=O)(O)CCN1CCOCC1 323
+CC(=O)NCC(=O)O 324
+N=C(N)NCCCC(=O)O 325
+CC(=O)N[C@@H](C)C(=O)O 326
+CCCC(N)=O 327
+C[N+](C)(C)CC(=O)O.[OH-] 328
+N[C@@H](C(=O)O)C1CCCCC1 329
+CSC[C@H](N)C(=O)O 330
+NCCCCC(=O)O 331
+CC1=C(C)C(=O)C(C)=C(C)C1=O 332
+CC(C(=O)O)C(=O)O 333
+O=C(O)/C=C/C(=O)O 334
+CC(N)(CCC(=O)O)C(=O)O 335
+N[C@H](C(=O)O)c1ccc(O)cc1 336
+O=C(O)CCCC(=O)O 337
+CC(C)(C)[C@H](N)C(=O)O 338
+CC(C)(C)[C@@H](N)C(=O)O 339
+NCC(O)CCC(N)C(=O)O.[Cl-] 340
+CNC(C)C(=O)O 341
+CS(=O)CCC(N)C(=O)O 342
+NC(CCCC(N)C(=O)O)C(=O)O 343
+O=C(O)C1CCNCC1 344
+Nc1ccc2[nH]ccc2c1 345
+O=C(O)c1ccc2[nH]ccc2c1 346
+Cc1ncnc2nc[nH]c12 347
+O=C(O)c1nccc2ccccc12 348
+O=C(O)c1cnc2ccccc2c1 349
+Clc1ccc2[nH]ccc2c1 350
+Fc1ccc2[nH]ccc2c1 351
+CCC(O)c1ccco1 352
+O=C(O)C1CCCNC1 353
+C[C@@H](O)[C@H](N)C(=O)O 354
+N[C@@H](CO)C(=O)O 355
+O=C(O)[C@@H]1CCCN1 356
+N[C@@H](Cc1ccccc1)C(=O)O 357
+CC(C)[C@H](N)C(=O)O 358
+NC(=O)C[C@H](N)C(=O)O 359
+N[C@@H](CC(=O)O)C(=O)O 360
+N[C@@H](Cc1c[nH]cn1)C(=O)O 361
+C[C@@H](N)C(=O)O 362
+CC(C)[C@@H](N)C(=O)O 363
+CC(C)C[C@@H](N)C(=O)O 364
+C[C@H](O)[C@@H](N)C(=O)O 365
+N[C@H](CO)C(=O)O 366
+N=C(N)NCCC[C@@H](N)C(=O)O 367
+CSCC[C@@H](N)C(=O)O 368
+NC(=O)CC[C@@H](N)C(=O)O 369
+N[C@H](CCC(=O)O)C(=O)O 370
+CCC[C@H](N)C(=O)O 371
+CC(C)CC(O)C(=O)O 372
+CS(=O)(=O)CCC(N)C(=O)O 373
+O=C(O)C1CSCN1 374
+Sc1ccccn1 375
+[O-][n+]1ccccc1S 376
+Cl.NC(=O)[C@@H](N)CO 377
+O=C(O)[C@@H](O)[C@H](O)C(=O)O 378
+C[C@H](O)[C@@H](N)CO 379
+C[C@@H](O)[C@H](N)CO 380
+CC(C)[C@@H](O)C(=O)O 381
+CC(C)[C@H](O)C(=O)O 382
+CSCC[C@H](N)C(=O)O 383
+CC1CCCCC1=O 384
+CC1CCC(N)CC1 385
+CC1CCCCC1O 386
+CC1CCCC(O)C1 387
+NC1CCCCC1N 388
+CN1CCC(=O)CC1 389
+CC1CNCC(C)C1 390
+CN1CCCC(O)C1 391
+CN1CCC(O)CC1 392
+CN1CCCCC1CO 393
+CC(=O)N1CCC(=O)CC1 394
+Brc1ccc2c(c1)OCCO2 395
+OC1CCOC1 396
+C=C1CCOC1=O 397
+CC(C)CC(=O)O 398
+Nc1ccc(C(F)(F)F)cc1 399
+O=C[C@H](O)[C@@H](O)[C@H](O)CO 400
+CC(O)CC(C)(C)O 401
+CC(=O)C(=O)O 402
+O=C(O)CCCc1cccs1 403
+NCc1ccccc1 404
+C=CCC(=O)O 405
+CC(=O)CCO 406
+CC(C)CC(=O)C(=O)O 407
+O=C(O)CCC1CCCCC1 408
+NCCN1CCOCC1 409
+CCOC(=O)N1CCCCC1 410
+CCOC(=O)N1CCC(=O)CC1 411
+CC(C)c1ccc(N)cc1 412
+C#CCCCC(=O)O 413
+CC(C)C[C@H](N)CO 414
+CC(C)C[C@@H](N)CO 415
+CCC(C)CN 416
+CC(=O)N1CCOCC1 417
+NCc1ccccn1 418
+Cc1nc(C)c(C)s1 419
+Cc1cscn1 420
+Cn1ccnc1 421
+Cc1ccco1 422
+NCC1CCNCC1 423
+CC(C)C[C@H](N)C(=O)O 424
+CC(=O)c1ccc(C)cc1 425
+CC(=O)c1cccc(C)c1 426
+CC(=O)c1ccccc1O 427
+CC(=O)c1cccc(F)c1 428
+CC(=O)c1ccc(F)cc1 429
+CC(=O)c1cccc(Cl)c1 430
+CC(=O)c1cccnc1 431
+CC(=O)c1cccn1C 432
+COc1ccco1 433
+CC(=O)c1ccc(C)o1 434
+COc1ccccc1N 435
+COc1cccc(O)c1 436
+COc1cccc(F)c1O 437
+COc1cc(F)ccc1O 438
+Cc1cc(=O)[nH]c(N)n1 439
+N[C@@H](CSCC[NH3+])C(=O)O.[Cl-] 440
+Cc1ncsc1CCO 441
+O=C1CCCCCC1 442
+NC1CCCCCC1 443
+O=C(O)C1CCCCCC1 444
+OCc1cccs1 445
+OCc1ccsc1 446
+CN1CC(=O)NC1=O 447
+CC1(C)CCC(=O)OC1=O 448
+CC1(C)NC(=O)NC1=O 449
+CN1CC(=O)NC1=N 450
+CC1(C)CC(=O)NC(=O)C1 451
+Nc1cc[nH]c(=O)n1 452
+CCOC(=O)N1CCNCC1 453
+CSCC[C@H](N)C(=O)O 454
+Nc1nc(Br)c2nc[nH]c2n1 atoms 11 bonds 12
+NC(=O)C1CCNCC1 atoms 9 bonds 9
+O=c1[nH]cc(Br)c(=O)[nH]1 atoms 9 bonds 9
+O=C1NC(=O)C(Br)(Br)C(=O)N1 atoms 11 bonds 11
+Sc1nc2cc(Cl)ccc2o1 atoms 11 bonds 12
+Nc1ccncn1 atoms 7 bonds 7
+Nc1ccnc(N)n1 atoms 8 bonds 8
+NC(=O)c1ccc(Br)cc1 atoms 10 bonds 10
+Nc1nc(=S)[nH]c2[nH]ncc12 atoms 11 bonds 12
+Brc1ccc2[nH]ccc2c1 atoms 10 bonds 11
+Cc1ccc2[nH]cnc2c1 atoms 10 bonds 11
+Nc1nccc2ccccc12 atoms 11 bonds 12
+Nc1cccc(N)c1 atoms 8 bonds 8
+Nc1ccccc1N atoms 8 bonds 8
+Nc1ccc(N)cc1 atoms 8 bonds 8
+Nc1cccc(O)c1 atoms 8 bonds 8
+Nc1ccc(O)cc1 atoms 8 bonds 8
+Nc1ccccc1O atoms 8 bonds 8
+Oc1cccc(O)c1 atoms 8 bonds 8
+Oc1ccc(O)cc1 atoms 8 bonds 8
+Nc1ccncc1 atoms 7 bonds 7
+Nc1cccnc1 atoms 7 bonds 7
+Nc1ccccn1 atoms 7 bonds 7
+O=c1cc[nH]cc1 atoms 7 bonds 7
+Oc1cccnc1 atoms 7 bonds 7
+Cc1ccc(N)nc1 atoms 8 bonds 8
+Cc1cccc(N)n1 atoms 8 bonds 8
+Cc1ccnc(N)c1 atoms 8 bonds 8
+Cc1ncccc1O atoms 8 bonds 8
+Cc1ccc[nH]c1=O atoms 8 bonds 8
+Nc1cccc(N)n1 atoms 8 bonds 8
+Oc1cccnc1O atoms 8 bonds 8
+Oc1ccnc(O)c1 atoms 8 bonds 8
+c1ccc2[nH]cnc2c1 atoms 9 bonds 10
+Clc1ccc2[nH]cnc2c1 atoms 10 bonds 11
+O=C(O)c1ccc2cc[nH]c2c1 atoms 12 bonds 13
+O=C(O)c1cc2cc(O)ccc2[nH]1 atoms 13 bonds 14
+O=C(O)c1cc2cc(F)ccc2[nH]1 atoms 13 bonds 14
+c1ccc2[nH]ncc2c1 atoms 9 bonds 10
+Nc1ccc2[nH]ncc2c1 atoms 10 bonds 11
+Cc1nc2ccccc2[nH]1 atoms 10 bonds 11
+Nc1nc2ccccc2[nH]1 atoms 10 bonds 11
+Cn1c(N)nc2ccccc21 atoms 11 bonds 12
+O=C(O)c1ccc2[nH]cnc2c1 atoms 12 bonds 13
+c1cnc2nc[nH]c2c1 atoms 9 bonds 10
+Nc1ccc2[nH]c(C(F)(F)F)nc2c1 atoms 14 bonds 15
+Nc1nc(N)c2nc[nH]c2n1 atoms 11 bonds 12
+Clc1ncnc2[nH]cnc12 atoms 10 bonds 11
+Nc1nc(Cl)c2nc[nH]c2n1 atoms 11 bonds 12
+Nc1cccc2cccc(N)c12 atoms 12 bonds 13
+Nc1cc2ccccc2cc1O atoms 12 bonds 13
+Oc1cccc2c(O)cccc12 atoms 12 bonds 13
+Oc1ccc2c(O)cccc2c1 atoms 12 bonds 13
+Oc1ccc2cc(O)ccc2c1 atoms 12 bonds 13
+Oc1cccc2ncccc12 atoms 11 bonds 12
+Nc1cccc2cccnc12 atoms 11 bonds 12
+Oc1ccc2ncccc2c1 atoms 11 bonds 12
+Oc1ccnc2ccccc12 atoms 11 bonds 12
+O=C(O)c1ccnc2ccccc12 atoms 13 bonds 14
+c1ccc2ncncc2c1 atoms 10 bonds 11
+O=c1[nH]c2ccccc2o1 atoms 10 bonds 11
+Nc1nc2c(Cl)cccc2s1 atoms 11 bonds 12
+O=C1CCCc2[nH]ccc21 atoms 10 bonds 11
+O=C(O)c1ccoc1 atoms 8 bonds 8
+Brc1c[nH]cn1 atoms 6 bonds 6
+NC(=O)N1CCCCC1 atoms 9 bonds 9
+FC(F)(F)c1nc2ccccc2[nH]1 atoms 13 bonds 14
+Cc1ccc2ccc(Cl)cc2n1 atoms 12 bonds 13
+Cc1cc(Cl)nc2ccccc12 atoms 12 bonds 13
+Cc1ccc2cc(Cl)ccc2n1 atoms 12 bonds 13
+Brc1cncc2ccccc12 atoms 11 bonds 12
+Oc1nc(O)c2nccnc2n1 atoms 12 bonds 13
+O=C(NO)c1ccccc1 atoms 10 bonds 10
+O=C(NO)c1ccccc1O atoms 11 bonds 11
+O=c1ccnc[nH]1 atoms 7 bonds 7
+N=C1NC(=N)c2ccccc21 atoms 11 bonds 12
+N=C1NC(=O)c2ccccc21 atoms 11 bonds 12
+Cc1nc(=O)c2ccccc2[nH]1 atoms 12 bonds 13
+c1ccc(CC2=NCCN2)cc1 atoms 12 bonds 13
+N=C(N)c1cccc(N)c1 atoms 12 bonds 10
+N=C(N)c1ccccc1 atoms 11 bonds 9
+O=C1Nc2ccccc2C1=O atoms 11 bonds 12
+Cc1ccc2c(c1)C(=O)C(=O)N2 atoms 12 bonds 13
+CN1C(=O)C(=O)c2ccccc21 atoms 12 bonds 13
+O=C1Cc2ccc(Cl)cc2N1 atoms 11 bonds 12
+O=C1Nc2ccc(Cl)cc2C1=O atoms 12 bonds 13
+O=c1ccoc2ccccc12 atoms 11 bonds 12
+O=C(O)c1cc(=O)c2ccccc2o1 atoms 14 bonds 15
+Cc1cc(=O)c2cc(Br)ccc2o1 atoms 13 bonds 14
+Cc1ccc2oc(=O)ccc2c1 atoms 12 bonds 13
+Cc1ccc2ccc(=O)oc2c1 atoms 12 bonds 13
+O=c1cc(O)c2ccccc2o1 atoms 12 bonds 13
+Cc1ccc2oc(=O)cc(O)c2c1 atoms 13 bonds 14
+Cc1cc(=O)oc2ccc(O)cc12 atoms 13 bonds 14
+Cc1cc(=O)oc2cc(O)ccc12 atoms 13 bonds 14
+O=c1ccc2cc(O)c(O)cc2o1 atoms 13 bonds 14
+O=c1oc2ccccc2cc1Cl atoms 12 bonds 13
+O=C(O)c1cc2ccccc2oc1=O atoms 14 bonds 15
+O=C(O)Cc1cc(=O)oc2cc(O)ccc12 atoms 16 bonds 17
+Nc1ccc2c(C(F)(F)F)cc(=O)oc2c1 atoms 16 bonds 17
+O=c1cc(C(F)(F)F)c2ccc(O)cc2o1 atoms 16 bonds 17
+NS(=O)(=O)c1ccccc1 atoms 10 bonds 10
+Cc1ccccc1S(N)(=O)=O atoms 11 bonds 11
+NS(=O)(=O)c1ccc(F)cc1 atoms 11 bonds 11
+NS(=O)(=O)c1ccccc1Cl atoms 11 bonds 11
+NS(=O)(=O)c1ccc(Cl)cc1 atoms 11 bonds 11
+NS(=O)(=O)c1ccc(C(=O)O)cc1 atoms 13 bonds 13
+NS(=O)(=O)c1ccc2ccccc2c1 atoms 14 bonds 15
+CC(=O)c1ccc(N)cc1 atoms 10 bonds 10
+CC(=O)c1cccc(N)c1 atoms 10 bonds 10
+CC(=O)c1cccc(O)c1 atoms 10 bonds 10
+CC(=O)c1ccc(O)cc1 atoms 10 bonds 10
+O=C(CCl)c1ccccc1 atoms 10 bonds 10
+CC(=O)c1c[nH]c2ccccc12 atoms 12 bonds 13
+CC(=O)c1ccc[nH]1 atoms 8 bonds 8
+COc1cccc2[nH]ccc12 atoms 11 bonds 12
+CC(=O)n1ccnc1 atoms 8 bonds 8
+COc1ccc(O)cc1 atoms 9 bonds 9
+COc1ccc(N)c(C)c1 atoms 10 bonds 10
+COc1ccc(C)cc1N atoms 10 bonds 10
+COc1ccc(N)cc1O atoms 10 bonds 10
+COc1cc(O)ccc1O atoms 10 bonds 10
+COc1cc(O)cc(O)c1 atoms 10 bonds 10
+COc1ccc(N)cc1F atoms 10 bonds 10
+COc1cc(C)nc(N)n1 atoms 10 bonds 10
+COc1ccnc(Cl)n1 atoms 9 bonds 9
+O=C1CCC(=O)CC1 atoms 8 bonds 8
+O=C1CCCC(=O)C1 atoms 8 bonds 8
+O=C1CCCCC1=O atoms 8 bonds 8
+OC1CCC(O)CC1 atoms 8 bonds 8
+CC1CC(=O)CC(=O)C1 atoms 9 bonds 9
+CC1C(=O)CCCC1=O atoms 9 bonds 9
+O=C1CCCC(=O)N1 atoms 8 bonds 8
+N#Cc1ccc(N)cc1 atoms 9 bonds 9
+N#Cc1cccc(N)c1 atoms 9 bonds 9
+O=CNc1ccccc1 atoms 9 bonds 9
+Cc1ccc(N)c(N)c1 atoms 9 bonds 9
+Cc1c(N)cccc1N atoms 9 bonds 9
+Cc1ccc(N)cc1N atoms 9 bonds 9
+Nc1cccc(CO)c1 atoms 9 bonds 9
+Cc1ccc(O)c(N)c1 atoms 9 bonds 9
+Cc1c(N)cccc1O atoms 9 bonds 9
+Cc1cc(O)ccc1N atoms 9 bonds 9
+Cc1cc(N)ccc1O atoms 9 bonds 9
+Cc1ccc(N)cc1O atoms 9 bonds 9
+Cc1cccc(O)c1O atoms 9 bonds 9
+Cc1cc(O)cc(O)c1 atoms 9 bonds 9
+Cc1cc(O)ccc1O atoms 9 bonds 9
+Cc1ccc(O)c(O)c1 atoms 9 bonds 9
+Cc1c(O)cccc1O atoms 9 bonds 9
+Oc1ccc(O)c(O)c1 atoms 9 bonds 9
+Oc1cc(O)cc(O)c1 atoms 9 bonds 9
+Oc1cccc(O)c1O atoms 9 bonds 9
+O=C(O)c1cccc(O)n1 atoms 10 bonds 10
+O=C(O)c1cccnc1O atoms 10 bonds 10
+O=C(O)c1ccc(O)nc1 atoms 10 bonds 10
+O=[N+]([O-])c1cccnc1O atoms 10 bonds 10
+COc1ccc(C(C)=O)cn1 atoms 11 bonds 11
+Cc1ccnc(O)c1[N+](=O)[O-] atoms 11 bonds 11
+COc1ccc([N+](=O)[O-])cn1 atoms 11 bonds 11
+O=C(O)c1cc(O)nc(O)c1 atoms 11 bonds 11
+Cc1ccc(O)c(CO)n1 atoms 10 bonds 10
+O=[N+]([O-])c1ncccc1O atoms 10 bonds 10
+Oc1cccnc1Br atoms 8 bonds 8
+Cc1cc(C)nc(N)c1 atoms 9 bonds 9
+Nc1ccc([N+](=O)[O-])cn1 atoms 10 bonds 10
+Nc1ncccc1[N+](=O)[O-] atoms 10 bonds 10
+Cc1cc(N)ncc1[N+](=O)[O-] atoms 11 bonds 11
+Cc1ccnc(N)c1[N+](=O)[O-] atoms 11 bonds 11
+Cc1cnc(N)c(Br)c1 atoms 9 bonds 9
+Cc1cc(Br)cnc1N atoms 9 bonds 9
+Nc1cc(Br)cnc1N atoms 9 bonds 9
+Cc1cc(C)nc(N)n1 atoms 9 bonds 9
+Cc1cc(O)nc(C)n1 atoms 9 bonds 9
+Nc1cc(N)nc(N)n1 atoms 9 bonds 9
+Cc1cc(O)nc(O)n1 atoms 9 bonds 9
+Nc1cc(O)nc(N)n1 atoms 9 bonds 9
+Cc1cc(=O)[nH]c(=S)[nH]1 atoms 9 bonds 9
+Cc1cc(Cl)nc(N)n1 atoms 9 bonds 9
+O=C1CC(=O)NC(=S)N1 atoms 9 bonds 9
+Nc1cc(Cl)nc(N)n1 atoms 9 bonds 9
+O=[N+]([O-])c1ccc2[nH]ccc2c1 atoms 12 bonds 13
+Cc1cc2cc([N+](=O)[O-])ccc2[nH]1 atoms 13 bonds 14
+O=[N+]([O-])c1ccc2cn[nH]c2c1 atoms 12 bonds 13
+O=[N+]([O-])c1ccc2[nH]ncc2c1 atoms 12 bonds 13
+O=[N+]([O-])c1ccc2[nH]cnc2c1 atoms 12 bonds 13
+O=[N+]([O-])c1cccc2ncccc12 atoms 13 bonds 14
+O=[N+]([O-])c1cccc2cccnc12 atoms 13 bonds 14
+O=[N+]([O-])c1cccc2cnccc12 atoms 13 bonds 14
+O=Cc1ccc2c(c1)OCCO2 atoms 12 bonds 13
+OCC1COc2ccccc2O1 atoms 12 bonds 13
+CC(=O)c1ccc2c(c1)OCCO2 atoms 13 bonds 14
+O=[N+]([O-])c1ccc(Cl)c2nonc12 atoms 13 bonds 14
+O=C(O)C1Cc2ccccc2CN1 atoms 14 bonds 14
+CC1(C)COC(=O)C1O atoms 9 bonds 9
+O=C(O)c1cccc(O)c1 atoms 10 bonds 10
+O=C(O)c1ccc(O)cc1 atoms 10 bonds 10
+O=C(O)C(=O)Cc1ccccc1 atoms 12 bonds 12
+O=[N+]([O-])c1ccc(O)c(O)c1 atoms 11 bonds 11
+Cc1ccc(S(=O)[O-])cc1 atoms 12 bonds 10
+O=C(O)Cc1cccc(O)c1 atoms 11 bonds 11
+COc1cccc(C(N)=O)c1 atoms 11 bonds 11
+O=C(O)Cc1ccc(O)cc1 atoms 11 bonds 11
+Nc1ccc(CCC(=O)O)cc1 atoms 12 bonds 12
+Nc1cccc(C(=O)O)c1 atoms 10 bonds 10
+OCc1ccc(Br)cc1 atoms 9 bonds 9
+Cc1cc2nc(N)[nH]c2cc1C atoms 12 bonds 13
+COc1ccc(C(=O)O)c(O)c1 atoms 12 bonds 12
+COC(=O)c1ccc(O)cc1O atoms 12 bonds 12
+O=C(O)c1ccc(O)cc1O atoms 11 bonds 11
+O=C(O)c1ccc(O)c(O)c1 atoms 11 bonds 11
+O=C(O)Cc1ccc(O)c(O)c1 atoms 12 bonds 12
+O=C(O)Cc1ccc2c(c1)OCO2 atoms 13 bonds 14
+CC(Cc1ccccc1)C(=O)O atoms 12 bonds 12
+N/C(=N\O)c1ccc(F)cc1 atoms 11 bonds 11
+NC(=O)c1ccc(F)cc1F atoms 11 bonds 11
+NC(=O)c1ccc(F)c(F)c1 atoms 11 bonds 11
+O=C(O)c1ccc(O)c(F)c1 atoms 11 bonds 11
+COc1ccc(C(=O)O)cc1F atoms 12 bonds 12
+N#CCC(=O)N1CCCCC1 atoms 11 bonds 11
+Cc1c(N)cccc1C(=O)O atoms 11 bonds 11
+Cc1ccc(C(=O)O)cc1N atoms 11 bonds 11
+COc1ccc(CC(=O)O)cc1OC atoms 14 bonds 14
+O=Cc1ccc(O)cc1 atoms 9 bonds 9
+Cc1cc(C=O)ccc1O atoms 10 bonds 10
+O=Cc1ccc(O)cc1O atoms 10 bonds 10
+O=Cc1ccc(O)c(O)c1 atoms 10 bonds 10
+NC(=O)c1ccc(O)cc1 atoms 10 bonds 10
+COc1ccc(C(N)=O)cc1 atoms 11 bonds 11
+O=C(O)/C=C/c1ccc(O)cc1 atoms 12 bonds 12
+O=C(O)CCc1ccccc1 atoms 11 bonds 11
+O=C(O)CCc1ccc(O)cc1 atoms 12 bonds 12
+COC(=O)CCc1ccc(O)cc1 atoms 13 bonds 13
+COc1ccc(CCC(=O)O)cc1 atoms 13 bonds 13
+O=C(O)c1cccc(I)c1 atoms 10 bonds 10
+NCCc1ccc(O)c(O)c1 atoms 12 bonds 11
+O=C(O)CCCCC1CCSS1 atoms 12 bonds 12
+NC(=O)c1cccnc1 atoms 9 bonds 9
+Cc1ccc(C(N)=O)cn1 atoms 10 bonds 10
+Cc1ccc(C(=O)O)c(C(=O)O)n1 atoms 13 bonds 13
+O=C(O)c1cccnc1C(=O)O atoms 12 bonds 12
+C=CC(=O)N1CCN(C(=O)C=C)CC1 atoms 14 bonds 14
+COC(=O)c1ccc(N)cc1 atoms 11 bonds 11
+Cc1cc(C(=O)O)ccc1N atoms 11 bonds 11
+CNc1ccc(C(=O)O)cc1 atoms 11 bonds 11
+Nc1ccc(C(=O)O)cc1N atoms 11 bonds 11
+NNc1ccc(C(=O)O)cc1 atoms 11 bonds 11
+Nc1ccc(C(=O)O)cc1O atoms 11 bonds 11
+Nc1ccc(C(=O)O)c(O)c1 atoms 11 bonds 11
+CN(C)c1ccc(C(=O)O)cc1 atoms 12 bonds 12
+O=C(O)c1ccc([N+](=O)[O-])cc1 atoms 12 bonds 12
+COc1cc(C(=O)O)ccc1N atoms 12 bonds 12
+Nc1ccc(C(=O)O)c(Cl)c1 atoms 11 bonds 11
+CC(=O)Nc1ccc(C(=O)O)cc1 atoms 13 bonds 13
+COC(=O)c1ccc([N+](=O)[O-])cc1 atoms 13 bonds 13
+CC(=O)c1ccc(Br)cc1 atoms 10 bonds 10
+O=C1CCc2cc(Br)ccc21 atoms 11 bonds 12
+CCC(=O)c1ccc(Br)cc1 atoms 11 bonds 11
+OCc1c(F)c(F)c(F)c(F)c1F atoms 13 bonds 13
+O=C(O)c1cccc(C(=O)O)n1 atoms 12 bonds 12
+O=C(O)c1c(F)c(F)c(F)c(F)c1F atoms 14 bonds 14
+CC(O)c1c(F)c(F)c(F)c(F)c1F atoms 14 bonds 14
+O=C(O)c1ccccc1C(=O)O atoms 12 bonds 12
+c1ccc(-c2c[nH]cn2)cc1 atoms 11 bonds 12
+Cc1ccc(CCC(=O)O)cc1 atoms 12 bonds 12
+O=C(O)c1cccnc1S atoms 10 bonds 10
+CSc1ncccc1C(=O)O atoms 11 bonds 11
+O=Cc1ccc2ccccc2n1 atoms 12 bonds 13
+O=Cc1ccc2cccc(O)c2n1 atoms 13 bonds 14
+O=C(O)c1ccccc1O atoms 10 bonds 10
+Cc1ccc(O)c(C(=O)O)c1 atoms 11 bonds 11
+COc1ccccc1C(=O)O atoms 11 bonds 11
+Cc1ccc(C(=O)O)c(O)c1 atoms 11 bonds 11
+Cc1cccc(C(=O)O)c1O atoms 11 bonds 11
+O=C(O)c1cc(F)ccc1O atoms 11 bonds 11
+O=C(O)c1c(O)cccc1F atoms 11 bonds 11
+NS(=O)(=O)c1ccc([N+](=O)[O-])cc1 atoms 13 bonds 13
+Nc1ccccc1CO atoms 9 bonds 9
+Cc1cccc(CO)c1N atoms 10 bonds 10
+Cc1ccc(N)c(CO)c1 atoms 10 bonds 10
+O=[N+]([O-])c1ccccc1CO atoms 11 bonds 11
+Nc1ccc(Cl)cc1CO atoms 10 bonds 10
+O=C(O)Cc1cccs1 atoms 9 bonds 9
+O=C(O)C(=O)c1cccs1 atoms 10 bonds 10
+O=C(O)/C=C/c1ccccc1 atoms 11 bonds 11
+Nc1ccc2ncsc2c1 atoms 10 bonds 11
+Nc1nc2ccccc2s1 atoms 10 bonds 11
+Oc1nc2ccccc2s1 atoms 10 bonds 11
+Cc1cccc2sc(N)nc12 atoms 11 bonds 12
+Cc1ccc2nc(N)sc2c1 atoms 11 bonds 12
+Cc1nc2cc(O)ccc2s1 atoms 11 bonds 12
+NNc1nc2ccccc2s1 atoms 11 bonds 12
+Nc1nc2ccc(F)cc2s1 atoms 11 bonds 12
+O=[N+]([O-])c1ccc2ncsc2c1 atoms 12 bonds 13
+Nc1nc2ccc(Cl)cc2s1 atoms 11 bonds 12
+CC(=O)Nc1ccc(O)cc1 atoms 11 bonds 11
+O=c1[nH]cc(F)c(=O)[nH]1 atoms 9 bonds 9
+NC(=S)Nc1ccccc1 atoms 10 bonds 10
+NC(=S)Nc1ccc(F)cc1 atoms 11 bonds 11
+O=C1Nc2cccc3cccc1c23 atoms 13 bonds 15
+O=C(O)c1ccc2c3c(cccc13)CC2 atoms 15 bonds 17
+Nc1ccc2c(c1)CCCC2=O atoms 12 bonds 13
+O=C1CCCc2c(O)cccc21 atoms 12 bonds 13
+O=C1CCCc2cc(O)ccc21 atoms 12 bonds 13
+Oc1cccc2c1CCCC2O atoms 12 bonds 13
+O=C(O)c1ccc2c(c1)CCCC2 atoms 13 bonds 14
+O=C(O)C1CCc2ccccc2C1 atoms 13 bonds 14
+CC(=O)C1CCc2ccccc2C1=O atoms 14 bonds 15
+O=C1CC(=O)c2ccccc21 atoms 11 bonds 12
+O=C1CCc2cccc(O)c21 atoms 11 bonds 12
+O=C1CCc2ccc(O)cc21 atoms 11 bonds 12
+O=C1CCc2c(O)cccc21 atoms 11 bonds 12
+O=C1CCc2cc(O)ccc21 atoms 11 bonds 12
+O=C1/C(=N/O)Cc2ccccc21 atoms 12 bonds 13
+O=C(O)C1Cc2ccccc2C1 atoms 12 bonds 13
+Cc1ccc(O)c2c1CCC2=O atoms 12 bonds 13
+O=C(O)c1ccc2c(c1)C(=O)CC2 atoms 13 bonds 14
+O=C1CC(C(=O)O)c2ccccc21 atoms 13 bonds 14
+CC(=O)C1C(=O)c2ccccc2C1=O atoms 14 bonds 15
+O=C1c2ccccc2C(=O)C1(O)O atoms 13 bonds 14
+Nc1cccc2c1CCNC2 atoms 11 bonds 12
+O=C1CCc2ccc(O)cc2N1 atoms 12 bonds 13
+COc1ccc2c(c1)CCCN2 atoms 12 bonds 13
+Oc1ccc(-c2ccc(O)cc2)cc1 atoms 14 bonds 15
+Oc1ccc(O)c(-c2ccccc2)c1 atoms 14 bonds 15
+Oc1ccccc1-c1ccccc1O atoms 14 bonds 15
+O=C(O)c1ccccc1-c1ccccc1 atoms 15 bonds 16
+O=C(O)c1ccc(-c2ccccc2)cc1 atoms 15 bonds 16
+OC1(c2ccc(Cl)cc2)CCNCC1 atoms 14 bonds 15
+Oc1ccc(N2CCNCC2)cc1 atoms 13 bonds 14
+Oc1ccccc1N1CCNCC1 atoms 13 bonds 14
+Oc1cccc(N2CCNCC2)c1 atoms 13 bonds 14
+O=[N+]([O-])c1ccc(N2CCNCC2)cc1 atoms 15 bonds 16
+CC(=O)N1CCN(c2ccc(O)cc2)CC1 atoms 16 bonds 17
+CC(=O)c1ccsc1 atoms 8 bonds 8
+NC(=O)c1cccs1 atoms 8 bonds 8
+O=C(O)c1cccs1 atoms 8 bonds 8
+O=C(O)c1ccsc1 atoms 8 bonds 8
+CC(=O)c1ccc(Cl)c(Cl)c1 atoms 11 bonds 11
+CC(C)(C)OC(=O)N1CCC(N)CC1 atoms 14 bonds 14
+O=C1CCc2cc(Cl)ccc21 atoms 11 bonds 12
+OCc1cc2ccccc2[nH]1 atoms 11 bonds 12
+c1ccc2c3c([nH]c2c1)CNCC3 atoms 13 bonds 15
+Oc1ccccc1O atoms 8 bonds 8
+Oc1ccccn1 atoms 7 bonds 7
+O=C(O)c1cc2ccccc2[nH]1 atoms 12 bonds 13
+Oc1ccc2ccc(O)cc2c1 atoms 12 bonds 13
+Oc1ccc2cccc(O)c2c1 atoms 12 bonds 13
+Nc1ccc2ncccc2c1 atoms 11 bonds 12
+Cc1csc(N)n1 atoms 7 bonds 7
+O=C(O)c1cccc2c1OCCO2 atoms 13 bonds 14
+Cc1cc2nc[nH]c2cc1C atoms 11 bonds 12
+O=c1ccnc[nH]1 807
+COC(=O)c1ccc(OC)cc1 808
+c1ccn2ccnc2c1 809
+NC(=O)c1cccc(N=O)c1 810
+NC(=O)[C@@H](N)Cc1ccccc1 811
+NC(=O)[C@@H](N)Cc1ccc(O)cc1 812
+O=C(O)Cc1cc(O)ccc1O 813
+COC(=O)c1ccc(N=C=O)cc1 814
+N=C(N)c1ccc(N)cc1 815
+N[C@H](C(=O)O)c1ccccc1 816
+N[C@@H](C(=O)O)c1ccccc1 817
+N[C@@H](Cc1ccc(I)cc1)C(=O)O 818
+N[C@@H](CO)Cc1ccccc1 819
+N[C@H](CO)Cc1ccccc1 820
+O=C(O)[C@H](O)c1ccccc1 821
+O=C(O)[C@@H](O)c1ccccc1 822
+Nc1ccc(O)c(C(=O)O)c1 823
+Nc1cccc(C(=O)O)c1O 824
+O=C(O)c1ccc(F)cc1O 825
+Nc1ccc(C(=O)O)cc1 826
+O=c1[nH]c(Br)nc2nc[nH]c12 827
+Nc1ncnc2[nH]ncc12 828
+Nc1ccncc1N 829
+NCc1cccnc1 830
+Oc1cccc2[nH]ccc12 831
+Cc1ncsc1C 832
+c1ccc2c(c1)CCN2 833
+Cn1c(C(=O)O)cc2ccccc21 834
+O=C1CCCc2occc21 835
+O=C(O)c1sc2ccccc2c1Cl 836
+CC1CCCCC1N 837
+O=C(O)C1CCCCN1 838
+Clc1ccc2ccccc2n1 839
+Brc1ccccc1-c1nnn[nH]1 840
+CC(=O)c1ccccc1 841
+CC(=O)c1ccccc1C 842
+CC(=O)c1ccccc1N 843
+CC(=O)c1ccccc1F 844
+CC(=O)c1ccc(Cl)cc1 845
+CC(=O)c1ccccc1Cl 846
+CC(=O)c1ccncc1 847
+CC(=O)c1ccccn1 848
+CC(=O)n1ccc2ccccc21 849
+CC(=O)c1ccn(C)c1 850
+CC(=O)c1ccco1 851
+NC(=O)c1ccccc1N 852
+COc1cccc(N)c1 853
+COc
