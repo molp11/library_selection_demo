@@ -52,7 +52,7 @@ dependencies:
   - numpy-base=1.15.0=py27h1793315_0
   - olefile=0.46=py27_0
   - openssl=1.1.1b=h14c3975_1
-  - pandas=0.23.4=py27h04863e7_0
+  - pandas=0.23.4
   - pathlib2=2.3.3=py27_0
   - pcre=8.43=he6710b0_0
   - pexpect=4.7.0=py27_0
