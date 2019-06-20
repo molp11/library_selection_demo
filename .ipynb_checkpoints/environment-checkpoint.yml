@@ -14,5 +14,4 @@ dependencies:
   - conda:
     - scikit-learn==0.19.1
     - rdkit
-    - rmg
     - py3dmol
