@@ -1,7 +1,6 @@
 # library_selection_demo
 
-## Click below to run the code yourself and view additional libraries in the 'data' directory
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/molp11/library_selection_demo/master)
+## Click here to run the code yourself and view additional libraries in the 'data' directory [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/molp11/library_selection_demo/master)
 
 # 2D descriptors:
 ## [a common school of thought](http://practicalfragments.blogspot.com/2011/11/pushing-rule-of-3.html) holds that fragment libraries should contain molecules with the following attributes:
