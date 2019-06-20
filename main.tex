@@ -1,0 +1,927 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+\documentclass[a4paper,landscape,11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    \usepackage{mathrsfs}
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+    \definecolor{ansi-default-inverse-fg}{HTML}{FFFFFF}
+    \definecolor{ansi-default-inverse-bg}{HTML}{000000}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatibility definitions
+    \def\gt{>}
+    \def\lt{<}
+    \let\Oldtex\TeX
+    \let\Oldlatex\LaTeX
+    \renewcommand{\TeX}{\textrm{\Oldtex}}
+    \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+    % Document parameters
+    % Document title
+    \title{Library selection demo}
+    
+    
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{from} \PY{n+nn}{os} \PY{k}{import} \PY{n}{listdir}
+        \PY{k+kn}{from} \PY{n+nn}{os}\PY{n+nn}{.}\PY{n+nn}{path} \PY{k}{import} \PY{n}{join}
+        \PY{k+kn}{from} \PY{n+nn}{fnmatch} \PY{k}{import} \PY{n}{fnmatch}
+        \PY{k+kn}{import} \PY{n+nn}{pickle}
+        \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+        
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{from} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats} \PY{k}{import} \PY{n}{gaussian\PYZus{}kde}
+        \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{decomposition} \PY{k}{import} \PY{n}{IncrementalPCA}
+        \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{manifold} \PY{k}{import} \PY{n}{TSNE}
+        
+        \PY{k+kn}{from} \PY{n+nn}{rdkit} \PY{k}{import} \PY{n}{DataStructs}
+        \PY{k+kn}{from} \PY{n+nn}{rdkit} \PY{k}{import} \PY{n}{Chem}
+        \PY{k+kn}{from} \PY{n+nn}{rdkit}\PY{n+nn}{.}\PY{n+nn}{Chem} \PY{k}{import} \PY{n}{AllChem}
+        \PY{k+kn}{from} \PY{n+nn}{rdkit}\PY{n+nn}{.}\PY{n+nn}{Chem} \PY{k}{import} \PY{n}{Descriptors}
+        \PY{k+kn}{from} \PY{n+nn}{rdkit}\PY{n+nn}{.}\PY{n+nn}{Chem} \PY{k}{import} \PY{n}{Draw}
+        \PY{k+kn}{from} \PY{n+nn}{rdkit}\PY{n+nn}{.}\PY{n+nn}{Chem}\PY{n+nn}{.}\PY{n+nn}{Fingerprints} \PY{k}{import} \PY{n}{FingerprintMols}
+        
+        \PY{k+kn}{from} \PY{n+nn}{matplotlib} \PY{k}{import} \PY{n}{pyplot} \PY{k}{as} \PY{n}{plt}
+        \PY{k+kn}{import} \PY{n+nn}{py3Dmol}
+        
+        \PY{k+kn}{from} \PY{n+nn}{tqdm} \PY{k}{import} \PY{n}{tqdm\PYZus{}notebook} \PY{k}{as} \PY{n}{tqdm}
+        
+        \PY{k+kn}{import} \PY{n+nn}{warnings}
+        \PY{n}{warnings}\PY{o}{.}\PY{n}{filterwarnings}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ignore}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{k}{def} \PY{n+nf}{draw3D}\PY{p}{(}\PY{n}{m}\PY{p}{,}\PY{n}{p}\PY{o}{=}\PY{k+kc}{None}\PY{p}{,}\PY{n}{confId}\PY{o}{=}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+        \PY{l+s+sd}{    draw chemical structures using 3D stick depictions}
+        \PY{l+s+sd}{    adapted from http://rdkit.blogspot.com/2016/07/a\PYZhy{}recent\PYZhy{}post\PYZhy{}on\PYZhy{}in\PYZhy{}pipeline\PYZhy{}talked.html}
+        \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{n}{mb} \PY{o}{=} \PY{n}{Chem}\PY{o}{.}\PY{n}{MolToMolBlock}\PY{p}{(}\PY{n}{m}\PY{p}{,}\PY{n}{confId}\PY{o}{=}\PY{n}{confId}\PY{p}{)}
+            \PY{k}{if} \PY{n}{p} \PY{o+ow}{is} \PY{k+kc}{None}\PY{p}{:}
+                \PY{n}{p} \PY{o}{=} \PY{n}{py3Dmol}\PY{o}{.}\PY{n}{view}\PY{p}{(}\PY{n}{width}\PY{o}{=}\PY{l+m+mi}{400}\PY{p}{,}\PY{n}{height}\PY{o}{=}\PY{l+m+mi}{400}\PY{p}{)}
+            \PY{n}{p}\PY{o}{.}\PY{n}{removeAllModels}\PY{p}{(}\PY{p}{)}
+            \PY{n}{p}\PY{o}{.}\PY{n}{addModel}\PY{p}{(}\PY{n}{mb}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sdf}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+            \PY{n}{p}\PY{o}{.}\PY{n}{setStyle}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{stick}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{p}{\PYZob{}}\PY{p}{\PYZcb{}}\PY{p}{\PYZcb{}}\PY{p}{)}
+            \PY{n}{p}\PY{o}{.}\PY{n}{setBackgroundColor}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{0xeeeeee}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+            \PY{n}{p}\PY{o}{.}\PY{n}{zoomTo}\PY{p}{(}\PY{p}{)}
+            \PY{k}{return} \PY{n}{p}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+        
+        \PY{k}{def} \PY{n+nf}{gaussianKDE}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+        \PY{l+s+sd}{    kernel density estimation for coloring scatter plots}
+        \PY{l+s+sd}{    see https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.gaussian\PYZus{}kde.html}
+        \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{n}{xy} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{vstack}\PY{p}{(}\PY{p}{[}\PY{n}{x}\PY{p}{,}\PY{n}{y}\PY{p}{]}\PY{p}{)}
+            \PY{n}{z} \PY{o}{=} \PY{n}{gaussian\PYZus{}kde}\PY{p}{(}\PY{n}{xy}\PY{p}{)}\PY{p}{(}\PY{n}{xy}\PY{p}{)}
+            \PY{k}{return} \PY{n}{z}
+        
+        \PY{k}{def} \PY{n+nf}{load\PYZus{}library}\PY{p}{(}\PY{n}{library}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+        \PY{l+s+sd}{    read structure files with .sdf and .smi extensions}
+        \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{k}{if} \PY{n}{library}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sdf}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+                \PY{n}{mols} \PY{o}{=} \PY{n}{Chem}\PY{o}{.}\PY{n}{SDMolSupplier}\PY{p}{(}\PY{n}{join}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{library}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+            \PY{k}{elif} \PY{n}{library}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{.}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{smi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+                \PY{n}{mols} \PY{o}{=} \PY{n}{Chem}\PY{o}{.}\PY{n}{SDMolSupplier}\PY{p}{(}\PY{n}{join}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{library}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+            \PY{k}{else}\PY{p}{:}
+                \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ERROR: please provide a path to a molecule data file in valid .smi or .sdf format}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} 
+            \PY{k}{return} \PY{n}{mols}
+\end{Verbatim}
+
+    \section{\texorpdfstring{\href{https://www.daylight.com/dayhtml/doc/theory/theory.smiles.html}{Simplified
+Molecular Input Line Entry System
+(SMILES)}}{Simplified Molecular Input Line Entry System (SMILES)}}\label{simplified-molecular-input-line-entry-system-smiles}
+
+\subsection{Advantages:}\label{advantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Memory efficient: relatively small data files
+\end{itemize}
+
+\subsection{Disadvantages:}\label{disadvantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Only capable of encoding 2D structure information
+\item
+  Can only include one identifier for each compound (i.e. no other
+  molecule attributes)
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{mols} \PY{o}{=} \PY{n}{Chem}\PY{o}{.}\PY{n}{SmilesMolSupplier}\PY{p}{(}\PY{n}{join}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Maybridge\PYZus{}Ro3\PYZus{}Diversity\PYZus{}Set1.smi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)} \PY{c+c1}{\PYZsh{} read SMILES file}
+        \PY{n}{m} \PY{o}{=} \PY{n}{mols}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{c+c1}{\PYZsh{} second molecule}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{Chem}\PY{o}{.}\PY{n}{MolToSmiles}\PY{p}{(}\PY{n}{m}\PY{p}{)}\PY{p}{)} \PY{c+c1}{\PYZsh{} SMILES pattern for second molecule}
+        \PY{n}{Draw}\PY{o}{.}\PY{n}{MolToImage}\PY{p}{(}\PY{n}{m}\PY{p}{)} \PY{c+c1}{\PYZsh{} draw 2D structure}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+CC(=O)NC1CCSC1=O
+
+    \end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}3}]:}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{main_files/main_3_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+
+    \section{\texorpdfstring{\href{http://www.structuralchemistry.org/pcsb/capp_cdf.php}{Structure
+Data File
+(SDF)}}{Structure Data File (SDF)}}\label{structure-data-file-sdf}
+
+\subsection{Advantages:}\label{advantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Capable of encoding 3D coordinates
+\item
+  Can include as many properties for each molecule as desired
+\end{itemize}
+
+\subsection{Disadvantages:}\label{disadvantages}
+
+\begin{itemize}
+\tightlist
+\item
+  Larger files (require 10 \(-\) 100 \(\times\) more memory)
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{mols} \PY{o}{=} \PY{n}{Chem}\PY{o}{.}\PY{n}{SDMolSupplier}\PY{p}{(}\PY{n}{join}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Maybridge\PYZus{}Ro3\PYZus{}Diversity\PYZus{}Set1.sdf}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)} \PY{c+c1}{\PYZsh{} read SD file (coordinates are 2D)}
+        \PY{n}{m} \PY{o}{=} \PY{n}{mols}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{c+c1}{\PYZsh{} second molecule}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{Chem}\PY{o}{.}\PY{n}{MolToMolBlock}\PY{p}{(}\PY{n}{m}\PY{p}{)}\PY{p}{)} \PY{c+c1}{\PYZsh{} 2D block for second molecule}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+     RDKit          2D
+
+ 10 10  0  0  0  0  0  0  0  0999 V2000
+    4.6250   -5.5000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.3417   -4.2542    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    4.6292   -4.6750    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.9167   -5.9167    0.0000 S   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0542   -4.6625    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.3417   -5.9125    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0667   -5.4875    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    3.2042   -4.6667    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.2042   -5.4917    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.7667   -4.2417    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  2  3  1  0
+  3  1  1  0
+  4  1  1  0
+  5  2  1  0
+  6  1  2  0
+  7  5  2  0
+  8  3  1  0
+  9  4  1  0
+ 10  5  1  0
+  8  9  1  0
+M  END
+
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{draw3D}\PY{p}{(}\PY{n}{m}\PY{p}{)} \PY{c+c1}{\PYZsh{} show 3D depiction}
+\end{Verbatim}
+
+    
+    
+    \subsection{\texorpdfstring{2D molecules can be converted to
+\href{https://www.rdkit.org/docs/GettingStartedInPython.html\#working-with-3d-molecules}{3D
+using
+RDKit}}{2D molecules can be converted to 3D using RDKit}}\label{d-molecules-can-be-converted-to-3d-using-rdkit}
+
+\begin{itemize}
+\tightlist
+\item
+  3D structure coordinates are needed to calculate 3D molecular
+  descriptors (see normalized principle moment ratio and plane of best
+  fit later on)
+\item
+  After 3D coordinates are generated, they can be saved in SDF format
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{m2} \PY{o}{=} \PY{n}{Chem}\PY{o}{.}\PY{n}{AddHs}\PY{p}{(}\PY{n}{m}\PY{p}{)} \PY{c+c1}{\PYZsh{} hydrogens need to be added for accurate 3D structure prediction}
+        \PY{n}{AllChem}\PY{o}{.}\PY{n}{EmbedMolecule}\PY{p}{(}\PY{n}{m2}\PY{p}{)} \PY{c+c1}{\PYZsh{} add 3d coordinates}
+        \PY{n}{AllChem}\PY{o}{.}\PY{n}{MMFFOptimizeMolecule}\PY{p}{(}\PY{n}{m2}\PY{p}{)} \PY{c+c1}{\PYZsh{} forcefield minimization}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{Chem}\PY{o}{.}\PY{n}{MolToMolBlock}\PY{p}{(}\PY{n}{m2}\PY{p}{)}\PY{p}{)} \PY{c+c1}{\PYZsh{} 3D block for second molecule}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+     RDKit          3D
+
+ 19 19  0  0  0  0  0  0  0  0999 V2000
+   -1.3912   -0.7729    1.3471 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.8149   -0.2635    0.4168 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5829    0.1418    0.4393 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0360   -0.9679    0.7518 S   0  0  0  0  0  0  0  0  0  0  0  0
+    1.7695    0.5369   -0.1621 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.9751   -1.3091    2.3644 O   0  0  0  0  0  0  0  0  0  0  0  0
+    1.5013    1.5607   -0.7817 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.2598    0.0308   -0.9249 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7563    0.1070   -0.6829 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.1829    0.0599    0.0334 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.1099   -0.9218    1.1331 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.6496    1.1641    0.8313 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.9370    0.8272   -1.6038 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0022   -0.9206   -1.4107 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0643    1.1273   -0.4334 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.3289   -0.2370   -1.5482 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.6838    0.7108    0.7545 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.2128   -0.9696    0.4012 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7081    0.0959   -0.9251 H   0  0  0  0  0  0  0  0  0  0  0  0
+  2  3  1  0
+  3  1  1  0
+  4  1  1  0
+  5  2  1  0
+  6  1  2  0
+  7  5  2  0
+  8  3  1  0
+  9  4  1  0
+ 10  5  1  0
+  8  9  1  0
+  2 11  1  0
+  3 12  1  0
+  8 13  1  0
+  8 14  1  0
+  9 15  1  0
+  9 16  1  0
+ 10 17  1  0
+ 10 18  1  0
+ 10 19  1  0
+M  END
+
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{draw3D}\PY{p}{(}\PY{n}{m2}\PY{p}{)} \PY{c+c1}{\PYZsh{} show 3D representation}
+\end{Verbatim}
+
+    
+    
+    \subsection{\texorpdfstring{Additional molecular properties are stored
+for each molecule after the end of the structure coordinates (M END) and
+before the compound delimiter
+(\(\$\$\$\$\))}{Additional molecular properties are stored for each molecule after the end of the structure coordinates (M END) and before the compound delimiter (\textbackslash{}\$\textbackslash{}\$\textbackslash{}\$\textbackslash{}\$)}}\label{additional-molecular-properties-are-stored-for-each-molecule-after-the-end-of-the-structure-coordinates-m-end-and-before-the-compound-delimiter}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{p}{[}\PY{n+nb}{str}\PY{p}{(}\PY{n}{x}\PY{p}{)} \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n}{m}\PY{o}{.}\PY{n}{GetPropNames}\PY{p}{(}\PY{p}{)}\PY{p}{]} \PY{c+c1}{\PYZsh{} list properties stored for compounds in current SD file}
+\end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}8}]:} ['Code',
+         'Structure\_smiles',
+         'Appearance',
+         'casno',
+         'product\_name',
+         'c\_log\_p',
+         'acd\_code',
+         'Flexibility',
+         'PSA',
+         'h\_bond\_donors',
+         'h\_bond\_acceptors',
+         'parent\_mw',
+         'Heavy\_Atom\_Count',
+         'PAINS\_Free',
+         'Set']
+\end{Verbatim}
+            
+    \section{2D descriptors:}\label{d-descriptors}
+
+\subsection{\texorpdfstring{A popular
+\href{http://practicalfragments.blogspot.com/2011/11/pushing-rule-of-3.html}{school
+of thought} holds that fragment libraries should contain molecules with
+the following
+attributes:}{A popular school of thought holds that fragment libraries should contain molecules with the following attributes:}}\label{a-popular-school-of-thought-holds-that-fragment-libraries-should-contain-molecules-with-the-following-attributes}
+
+\begin{itemize}
+\tightlist
+\item
+  Molecular Weight \(\lt\) 300 g/mol
+\item
+  ClogP \(\le\) 3
+\item
+  Number of hydrogen bond donors \(\le\) 3
+\item
+  Number of hydrogen bond acceptors \(\le\) 3
+\item
+  Number of rotatable bonds \(\le\) 3
+\item
+  Polar surface area \(\le\) 60 Å
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{k}{def} \PY{n+nf}{calc\PYZus{}descriptors}\PY{p}{(}\PY{n}{library}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+        \PY{l+s+sd}{    calculate 2D descriptors for a collection of molecules }
+        \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{n}{mols} \PY{o}{=} \PY{n}{load\PYZus{}library}\PY{p}{(}\PY{n}{library}\PY{p}{)}   
+            \PY{n}{xrange} \PY{o}{=} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{mols}\PY{p}{)}\PY{p}{)}
+            \PY{n}{zeros} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{mols}\PY{p}{)}\PY{p}{)}
+            \PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Molecular Weight}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{zeros}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClogP}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{zeros}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Number of H\PYZhy{}bond acceptors}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{zeros}\PY{p}{,} 
+                               \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Number of H\PYZhy{}bond donors}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{zeros}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Number of rotatable bonds}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{zeros}\PY{p}{,}
+                               \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Polar surface area}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{zeros}\PY{p}{\PYZcb{}}\PY{p}{)}
+            \PY{n}{df}\PY{o}{.}\PY{n}{name} \PY{o}{=} \PY{n}{library}
+            \PY{k}{for} \PY{n}{x}\PY{p}{,} \PY{n}{tq} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{xrange}\PY{p}{,} \PY{n}{tqdm}\PY{p}{(}\PY{n}{xrange}\PY{p}{,} \PY{n}{desc}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{calculating...}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                \PY{k}{try}\PY{p}{:}
+                    \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Molecular Weight}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n}{x}\PY{p}{]} \PY{o}{=} \PY{n}{Descriptors}\PY{o}{.}\PY{n}{MolWt}\PY{p}{(}\PY{n}{mols}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{)}
+                    \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ClogP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n}{x}\PY{p}{]} \PY{o}{=} \PY{n}{Descriptors}\PY{o}{.}\PY{n}{MolLogP}\PY{p}{(}\PY{n}{mols}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{)}
+                    \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Number of H\PYZhy{}bond acceptors}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n}{x}\PY{p}{]} \PY{o}{=} \PY{n}{AllChem}\PY{o}{.}\PY{n}{CalcNumLipinskiHBA}\PY{p}{(}\PY{n}{mols}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{)}
+                    \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Number of H\PYZhy{}bond donors}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n}{x}\PY{p}{]} \PY{o}{=} \PY{n}{AllChem}\PY{o}{.}\PY{n}{CalcNumLipinskiHBD}\PY{p}{(}\PY{n}{mols}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{)}
+                    \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Number of rotatable bonds}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n}{x}\PY{p}{]} \PY{o}{=} \PY{n}{Descriptors}\PY{o}{.}\PY{n}{NumRotatableBonds}\PY{p}{(}\PY{n}{mols}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{)}
+                    \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Polar surface area}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n}{x}\PY{p}{]} \PY{o}{=} \PY{n}{Descriptors}\PY{o}{.}\PY{n}{TPSA}\PY{p}{(}\PY{n}{mols}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{)}
+                \PY{k}{except}\PY{p}{:}
+                    \PY{k}{pass}
+            \PY{k}{return} \PY{n}{df}
+        
+        \PY{k}{def} \PY{n+nf}{plot\PYZus{}descriptors}\PY{p}{(}\PY{n}{library}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+        \PY{l+s+sd}{    plot histograms for Ro3 descriptors from a collection of molecules}
+        \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{n}{df} \PY{o}{=} \PY{n}{calc\PYZus{}descriptors}\PY{p}{(}\PY{n}{library}\PY{p}{)}
+            \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+            \PY{n}{c} \PY{o}{=} \PY{l+m+mi}{0}
+            \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{ax}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                    \PY{n}{desc} \PY{o}{=} \PY{n+nb}{list}\PY{p}{(}\PY{n}{df}\PY{p}{)}\PY{p}{[}\PY{n}{c}\PY{p}{]}
+                    \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{n}{desc}\PY{p}{]}\PY{p}{,} \PY{n}{edgecolor}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{name}\PY{p}{)}
+                    \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{n}{desc}\PY{p}{)}
+                    \PY{n}{ax}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZsh{} compounds}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+                    \PY{n}{c} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+            \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+            \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+            \PY{n}{plt}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{library} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data/Maybridge\PYZus{}Ro3\PYZus{}Diversity\PYZus{}Set1.sdf}\PY{l+s+s1}{\PYZsq{}} \PY{c+c1}{\PYZsh{} Note: can change this to any other  structure file}
+         \PY{n}{plot\PYZus{}descriptors}\PY{p}{(}\PY{n}{library}\PY{p}{)}
+\end{Verbatim}
+
+
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{main_files/main_14_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \section{\texorpdfstring{\href{https://blogs.sciencemag.org/pipeline/archives/2013/08/08/the_3d_fragment_consortium}{3-dimensionality
+(vs. flat structures) as a strategy to increase library
+diversity}}{3-dimensionality (vs. flat structures) as a strategy to increase library diversity}}\label{dimensionality-vs.-flat-structures-as-a-strategy-to-increase-library-diversity}
+
+\subsection{Plots quantifying molecule 3D character depicted
+below}\label{plots-quantifying-molecule-3d-character-depicted-below}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://pubs.acs.org/doi/full/10.1021/ci025599w}{2-dimensional
+  normalized ratios of principle moments of inertia}
+\item
+  \href{https://pubs.acs.org/doi/pdfplus/10.1021/ci300293f}{Plane of
+  best fit (PBF) score versus sum of NPRs}
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{k}{def} \PY{n+nf}{calc\PYZus{}3D\PYZus{}descriptors}\PY{p}{(}\PY{n}{library}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+         \PY{l+s+sd}{    Calculate 3D descriptors from collection of molecules}
+         \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{mols} \PY{o}{=} \PY{n}{load\PYZus{}library}\PY{p}{(}\PY{n}{library}\PY{p}{)}  
+             \PY{n}{xrange} \PY{o}{=} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{mols}\PY{p}{)}\PY{p}{)}
+             \PY{n}{zeros} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{mols}\PY{p}{)}\PY{p}{)}
+             \PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{NPR1}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{zeros}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{NPR2}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{zeros}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PBF}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{n}{zeros}\PY{p}{\PYZcb{}}\PY{p}{)}
+             \PY{n}{df}\PY{o}{.}\PY{n}{name} \PY{o}{=} \PY{n}{library}
+             \PY{k}{for} \PY{n}{x}\PY{p}{,} \PY{n}{tq} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{xrange}\PY{p}{,} \PY{n}{tqdm}\PY{p}{(}\PY{n}{xrange}\PY{p}{,} \PY{n}{desc}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{calculating...}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{try}\PY{p}{:}
+                     \PY{n}{m2} \PY{o}{=} \PY{n}{Chem}\PY{o}{.}\PY{n}{AddHs}\PY{p}{(}\PY{n}{mols}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{)}
+                     \PY{n}{AllChem}\PY{o}{.}\PY{n}{EmbedMolecule}\PY{p}{(}\PY{n}{m2}\PY{p}{)}
+                     \PY{n}{AllChem}\PY{o}{.}\PY{n}{MMFFOptimizeMolecule}\PY{p}{(}\PY{n}{m2}\PY{p}{)}
+                     \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{NPR1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n}{x}\PY{p}{]} \PY{o}{=} \PY{n}{AllChem}\PY{o}{.}\PY{n}{CalcNPR1}\PY{p}{(}\PY{n}{m2}\PY{p}{)}
+                     \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{NPR2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n}{x}\PY{p}{]} \PY{o}{=} \PY{n}{AllChem}\PY{o}{.}\PY{n}{CalcNPR2}\PY{p}{(}\PY{n}{m2}\PY{p}{)}
+                     \PY{n}{df}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PBF}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n}{x}\PY{p}{]} \PY{o}{=} \PY{n}{AllChem}\PY{o}{.}\PY{n}{CalcPBF}\PY{p}{(}\PY{n}{m2}\PY{p}{)}
+                 \PY{k}{except}\PY{p}{:}
+                     \PY{k}{pass}
+             \PY{k}{return} \PY{n}{df}
+         
+         \PY{k}{def} \PY{n+nf}{plot\PYZus{}3D\PYZus{}descriptors}\PY{p}{(}\PY{n}{library}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+         \PY{l+s+sd}{    Create plots to assess molecule 3D character}
+         \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{df} \PY{o}{=} \PY{n}{calc\PYZus{}3D\PYZus{}descriptors}\PY{p}{(}\PY{n}{library}\PY{p}{)}
+             \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{scatter}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{NPR1}\PY{p}{,} \PY{n}{df}\PY{o}{.}\PY{n}{NPR2}\PY{p}{,} \PY{n}{c}\PY{o}{=}\PY{n}{gaussianKDE}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{NPR1}\PY{p}{,} \PY{n}{df}\PY{o}{.}\PY{n}{NPR2}\PY{p}{)}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{jet}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.8}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.45}\PY{p}{,} \PY{l+m+mf}{1.05}\PY{p}{]}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{o}{.}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mf}{1.1}\PY{p}{]}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{repeat}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}\PY{p}{,} \PY{n}{c}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{linestyle}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mf}{0.5}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mf}{0.5}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}\PY{o}{*}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{c}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{linestyle}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}\PY{o}{*}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{c}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{linestyle}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{o}{.}\PY{l+m+mi}{08}\PY{p}{,} \PY{l+m+mf}{1.02}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{cylindrical}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{l+m+mf}{0.90}\PY{p}{,} \PY{l+m+mf}{1.02}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{spherical}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{l+m+mf}{0.465}\PY{p}{,} \PY{l+m+mf}{0.47}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{disc}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{NPR2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{NPR1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{scatter}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{PBF}\PY{p}{,} \PY{n}{df}\PY{o}{.}\PY{n}{NPR1} \PY{o}{+} \PY{n}{df}\PY{o}{.}\PY{n}{NPR2}\PY{p}{,} \PY{n}{c}\PY{o}{=}\PY{n}{gaussianKDE}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{PBF}\PY{p}{,} \PY{n}{df}\PY{o}{.}\PY{n}{NPR1} \PY{o}{+} \PY{n}{df}\PY{o}{.}\PY{n}{NPR2}\PY{p}{)}\PY{p}{,} 
+                           \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{jet}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.8}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.95}\PY{p}{,} \PY{l+m+mf}{1.75}\PY{p}{]}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{PBF}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{repeat}\PY{p}{(}\PY{l+m+mf}{0.6}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mf}{0.95}\PY{p}{,} \PY{l+m+mf}{1.75}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}\PY{p}{,} \PY{n}{c}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{linestyle}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                       \PY{n}{label}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{3D threshold for NPR1+NPR2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{PBF}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{repeat}\PY{p}{(}\PY{l+m+mf}{1.07}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}\PY{p}{,} \PY{n}{c}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{linestyle}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                       \PY{n}{label}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{3D threshold for PBF}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PBF}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{NPR1+NPR2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{p}{)}
+             \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+             \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+             \PY{n}{plt}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{library} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data/Enamine\PYZus{}3D\PYZus{}Shaped\PYZus{}Diverse\PYZus{}Fragments.sdf}\PY{l+s+s1}{\PYZsq{}} \PY{c+c1}{\PYZsh{} Note: can change this to any other structure file}
+         \PY{n}{plot\PYZus{}3D\PYZus{}descriptors}\PY{p}{(}\PY{n}{library}\PY{p}{)}
+\end{Verbatim}
+
+
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{main_files/main_17_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \section{\texorpdfstring{\href{https://www.rdkit.org/docs/GettingStartedInPython.html\#fingerprinting-and-molecular-similarity}{Fingerprinting
+and molecular
+similarity}}{Fingerprinting and molecular similarity}}\label{fingerprinting-and-molecular-similarity}
+
+\subsection{\texorpdfstring{\href{https://www.daylight.com/dayhtml/doc/theory/theory.finger.html}{click
+here for a more detailed explanation of the theory behind
+fingerprints}}{click here for a more detailed explanation of the theory behind fingerprints}}\label{click-here-for-a-more-detailed-explanation-of-the-theory-behind-fingerprints}
+
+\begin{itemize}
+\tightlist
+\item
+  In general, molecular substructures are converted into bitmaps that
+  can be compared mathematically for similarity
+\end{itemize}
+
+\subsection{Comparing nearest-neighbor similarity between two
+libraries}\label{comparing-nearest-neighbor-similarity-between-two-libraries}
+
+\begin{itemize}
+\tightlist
+\item
+  Example use case: would combining two different compound libraries
+  lead to substantial redundancy?
+\item
+  In the example shown below, each compound fingerprint in one library
+  is compared to each compound fingerprint in another and the highest
+  pair-wise similarity score is recorded for each molecule
+\item
+  Here, scoring ranges from 0.0 (no similarity) to 1.0 (structurally
+  identical)
+\item
+  E.g. if a compound is associated with a score of 1.0, this means the
+  same compound exists in both libraries
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{k}{def} \PY{n+nf}{calc\PYZus{}nearest\PYZus{}neighbors}\PY{p}{(}\PY{n}{fpsA}\PY{p}{,} \PY{n}{fpsB}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+         \PY{l+s+sd}{    Calculate lists of nearest\PYZhy{}neighbor similarities between to compound collections}
+         \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{molsA} \PY{o}{=} \PY{n}{load\PYZus{}library}\PY{p}{(}\PY{n}{libraryA}\PY{p}{)}
+             \PY{n}{molsB} \PY{o}{=} \PY{n}{load\PYZus{}library}\PY{p}{(}\PY{n}{libraryB}\PY{p}{)}
+             \PY{n}{fpsA} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+             \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{molsA}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{try}\PY{p}{:}
+                     \PY{n}{fpsA}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{FingerprintMols}\PY{o}{.}\PY{n}{FingerprintMol}\PY{p}{(}\PY{n}{molsA}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+                 \PY{k}{except}\PY{p}{:}
+                     \PY{k}{pass}
+             \PY{n}{fpsB} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+             \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{molsB}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{try}\PY{p}{:}
+                     \PY{n}{fpsB}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{FingerprintMols}\PY{o}{.}\PY{n}{FingerprintMol}\PY{p}{(}\PY{n}{molsB}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+                 \PY{k}{except}\PY{p}{:}
+                     \PY{k}{pass}
+             \PY{n}{nnA} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{fpsA}\PY{p}{)}\PY{p}{)}
+             \PY{k}{for} \PY{n}{x}\PY{p}{,} \PY{n}{tq} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{fpsA}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{tqdm}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{fpsA}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{desc}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{calculating A...}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{similarity} \PY{o}{=} \PY{l+m+mf}{0.}
+                 \PY{k}{for} \PY{n}{y} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{fpsB}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                     \PY{n}{tmp} \PY{o}{=} \PY{n}{DataStructs}\PY{o}{.}\PY{n}{FingerprintSimilarity}\PY{p}{(}\PY{n}{fpsA}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{,} \PY{n}{fpsB}\PY{p}{[}\PY{n}{y}\PY{p}{]}\PY{p}{)}
+                     \PY{k}{if} \PY{n}{tmp} \PY{o}{\PYZgt{}} \PY{n}{similarity}\PY{p}{:}
+                         \PY{n}{similarity} \PY{o}{=} \PY{n}{tmp}
+                     \PY{n}{nnA}\PY{p}{[}\PY{n}{x}\PY{p}{]} \PY{o}{=} \PY{n}{similarity}
+             \PY{n}{nnB} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{fpsB}\PY{p}{)}\PY{p}{)}
+             \PY{k}{for} \PY{n}{x}\PY{p}{,} \PY{n}{tq} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{fpsB}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{tqdm}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{fpsB}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{desc}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{calculating B...}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{similarity} \PY{o}{=} \PY{l+m+mf}{0.}
+                 \PY{k}{for} \PY{n}{y} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{fpsA}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                     \PY{n}{tmp} \PY{o}{=} \PY{n}{DataStructs}\PY{o}{.}\PY{n}{FingerprintSimilarity}\PY{p}{(}\PY{n}{fpsB}\PY{p}{[}\PY{n}{x}\PY{p}{]}\PY{p}{,} \PY{n}{fpsA}\PY{p}{[}\PY{n}{y}\PY{p}{]}\PY{p}{)}
+                     \PY{k}{if} \PY{n}{tmp} \PY{o}{\PYZgt{}} \PY{n}{similarity}\PY{p}{:}
+                         \PY{n}{similarity} \PY{o}{=} \PY{n}{tmp}
+                     \PY{n}{nnB}\PY{p}{[}\PY{n}{x}\PY{p}{]} \PY{o}{=} \PY{n}{similarity}      
+             \PY{k}{return} \PY{n}{nnA}\PY{p}{,} \PY{n}{nnB}
+         
+         \PY{k}{def} \PY{n+nf}{plot\PYZus{}nearest\PYZus{}neighbors}\PY{p}{(}\PY{n}{libraryA}\PY{p}{,} \PY{n}{libraryB}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+         \PY{l+s+sd}{    plot nearest\PYZhy{}neighbor similarities between two compound collections}
+         \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{nnA}\PY{p}{,} \PY{n}{nnB} \PY{o}{=} \PY{n}{calc\PYZus{}nearest\PYZus{}neighbors}\PY{p}{(}\PY{n}{join}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{libraryA}\PY{p}{)}\PY{p}{,} \PY{n}{join}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{libraryB}\PY{p}{)}\PY{p}{)}
+             \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{nnA}\PY{p}{,} \PY{n}{edgecolor}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{libraryA}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsh{} compounds}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Fingerprint Similarity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{nnB}\PY{p}{,} \PY{n}{edgecolor}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{libraryB}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Fingerprint Similarity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Fingerprint Similarity}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+             \PY{n}{plt}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{libraryA} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data/Maybridge\PYZus{}Ro3\PYZus{}Diversity\PYZus{}Set1.sdf}\PY{l+s+s1}{\PYZsq{}} \PY{c+c1}{\PYZsh{} Note: can change this to any other  structure file}
+         \PY{n}{libraryB} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data/TargetMol\PYZus{}1500\PYZus{}fragments\PYZhy{}1500.sdf}\PY{l+s+s1}{\PYZsq{}} \PY{c+c1}{\PYZsh{} Note: can change this to any other  structure file}
+         \PY{n}{plot\PYZus{}nearest\PYZus{}neighbors}\PY{p}{(}\PY{n}{libraryA}\PY{p}{,} \PY{n}{libraryB}\PY{p}{)}
+\end{Verbatim}
+
+
+
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{main_files/main_20_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \section{2D depictions of molecular
+fingerprints:}\label{d-depictions-of-molecular-fingerprints}
+
+\begin{itemize}
+\tightlist
+\item
+  The dimensionality of fingerprint bitmaps (here we used 2048-bit
+  \href{https://www.rdkit.org/docs/GettingStartedInPython.html\#morgan-fingerprints-circular-fingerprints}{Morgan
+  fingerprints}) can be reduced using statistical techniques like
+  \href{https://en.wikipedia.org/wiki/Principal_component_analysis}{Principle
+  component analysis (PCA)} to allow for visualization and comparison of
+  library diversity.
+\item
+  Here we fit a
+  \href{https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html}{pca
+  model} on a set of \textasciitilde{}348 million fragments (MW \(\le\)
+  350 g/mol) downloaded from the
+  \href{http://zinc15.docking.org/tranches/home/\#}{ZINC database}
+\item
+  The model (loaded here as 'ipca.pkl') is then used to project 2048 bit
+  \href{https://www.rdkit.org/docs/GettingStartedInPython.html\#morgan-fingerprints-circular-fingerprints}{Morgan
+  fingerprints} calculated from compound libraries onto two dimensions
+  for visual comparison of diversity.
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{ipca} \PY{o}{=} \PY{n}{pickle}\PY{o}{.}\PY{n}{load}\PY{p}{(}\PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ipca.pkl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{rb}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+         
+         \PY{k}{def} \PY{n+nf}{decompose\PYZus{}mols}\PY{p}{(}\PY{n}{library}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+         \PY{l+s+sd}{    calculate Morgan fingerprints for each molecule in a collection and}
+         \PY{l+s+sd}{    reduce 2048 bit fingerprints to 20 principle components using a pre\PYZhy{}fit incremental PCA model}
+         \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{mols} \PY{o}{=} \PY{n}{load\PYZus{}library}\PY{p}{(}\PY{n}{library}\PY{p}{)}
+             \PY{n}{bits} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+             \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n}{mols}\PY{p}{:}
+                 \PY{k}{try}\PY{p}{:}
+                     \PY{n}{bits}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{AllChem}\PY{o}{.}\PY{n}{GetMorganFingerprintAsBitVect}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+                 \PY{k}{except}\PY{p}{:}
+                     \PY{k}{pass}
+             \PY{n}{X} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{bits}\PY{p}{)}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{bits}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+             \PY{k}{for} \PY{n}{i}\PY{p}{,} \PY{n}{b} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{bits}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{X}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{=} \PY{p}{[}\PY{n+nb}{int}\PY{p}{(}\PY{n}{x}\PY{p}{)} \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n}{b}\PY{p}{]}
+             \PY{n}{x} \PY{o}{=} \PY{n}{ipca}\PY{o}{.}\PY{n}{transform}\PY{p}{(}\PY{n}{X}\PY{p}{)}
+             \PY{k}{return} \PY{n}{x}\PY{o}{.}\PY{n}{T}
+         
+         \PY{k}{def} \PY{n+nf}{plot\PYZus{}pcs}\PY{p}{(}\PY{n}{libraryA}\PY{p}{,} \PY{n}{libraryB}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+         \PY{l+s+sd}{    plot 2D molecular fingerprint depictions to compare two compound collections}
+         \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{XA}\PY{p}{,} \PY{n}{XB} \PY{o}{=} \PY{n}{decompose\PYZus{}mols}\PY{p}{(}\PY{n}{libraryA}\PY{p}{)}\PY{p}{,} \PY{n}{decompose\PYZus{}mols}\PY{p}{(}\PY{n}{libraryB}\PY{p}{)}
+             \PY{n}{xmin}\PY{p}{,} \PY{n}{xmax} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{n}{XA}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{n}{XB}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{n}{XA}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{n}{XB}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+             \PY{n}{ymin}\PY{p}{,} \PY{n}{ymax} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{n}{XA}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{n}{XB}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{n}{XA}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{n}{XB}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+             \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{scatter}\PY{p}{(}\PY{n}{XA}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{XA}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{c}\PY{o}{=}\PY{n}{gaussianKDE}\PY{p}{(}\PY{n}{XA}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{XA}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{jet}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.8}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PC2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PC1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{p}{[}\PY{n}{xmin}\PY{p}{,} \PY{n}{xmax}\PY{p}{]}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{p}{[}\PY{n}{ymin}\PY{p}{,} \PY{n}{ymax}\PY{p}{]}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{libraryA}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{scatter}\PY{p}{(}\PY{n}{XB}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{XB}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{c}\PY{o}{=}\PY{n}{gaussianKDE}\PY{p}{(}\PY{n}{XB}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{XB}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{jet}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{s}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.8}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PC1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{p}{[}\PY{n}{xmin}\PY{p}{,} \PY{n}{xmax}\PY{p}{]}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{p}{[}\PY{n}{ymin}\PY{p}{,} \PY{n}{ymax}\PY{p}{]}\PY{p}{)}
+             \PY{n}{ax}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{libraryB}\PY{p}{)}
+             \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+             \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+             \PY{n}{plt}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{libraryA} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data/Zenobia\PYZus{}968.sdf}\PY{l+s+s1}{\PYZsq{}} \PY{c+c1}{\PYZsh{} Note: can change this to any other  structure file}
+         \PY{n}{libraryB} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{data/LifeChemicals\PYZus{}3D\PYZus{}Fragment\PYZus{}Library.sdf}\PY{l+s+s1}{\PYZsq{}} \PY{c+c1}{\PYZsh{} Note: can change this to any other  structure file}
+         \PY{n}{plot\PYZus{}pcs}\PY{p}{(}\PY{n}{libraryA}\PY{p}{,} \PY{n}{libraryB}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{main_files/main_23_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
