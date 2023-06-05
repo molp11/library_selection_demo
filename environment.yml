@@ -2,7 +2,7 @@ name: lib-selection
 channels:
   - conda-forge
 dependencies:
-  - python
+  - python==3.5
   - numpy
   - pip
   - pip:
@@ -12,6 +12,6 @@ dependencies:
     - matplotlib
     - tqdm
   - conda:
-    - scikit-learn==0.19.2
+    - scikit-learn==0.19.1
     - rdkit
     - py3dmol
